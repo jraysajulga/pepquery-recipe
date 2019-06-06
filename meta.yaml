@@ -3,21 +3,22 @@ package:
   version: "0.8"
 
 build:
-  number: 1
+  number: 0
   noarch: generic
 
 source:
   url: https://github.com/jraysajulga/pepquery-wrapper/archive/v0.8.zip
-  md5: 883d92d0f61182cd2aa6e668b0e54565
+  md5: d15364b689ec41578d2f41a6d74ee06f
 
 requirements:
   run:
-    - openjdk >=8,<9
+    - openjdk
 
 test:
   commands:
-    - java -jar pepquery.jar
+    - java -jar $PREFIX/bin/pepquery.jar -h
 
 about:
   home: https://github.com/bzhanglab/PepQuery
+  license: TBD
   summary: PepQuery is a peptide-centric search engine for novel peptide identification and validation. 
